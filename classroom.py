@@ -51,9 +51,9 @@ def read_ilearn_export(csvfile, key_field):
         for line in reader:
             if 'Email address' in line and line['Email address'] != '':
                 groups = line['Groups'].split(';')
-                workshop = [g for g in groups if 'Workshop' in g]
+                workshop = [g for g in groups if 'Practical' in g]
                 if workshop != []:
-                    workshop = workshop[0].replace('[', '').replace(']', '')
+                    workshop = workshop[-1].replace('[', '').replace(']', '')
                     if not workshop in workshops:
                         workshops.append(workshop)
                 
@@ -127,10 +127,12 @@ def checkout(config, student):
             p1 = subprocess.Popen(cmd, cwd=targetdir, stdout=subprocess.PIPE)
             output = p1.communicate()
         else:
-            
-            cmd = ['git', 'clone', student['url'], targetdir]
-            p1 = subprocess.Popen(cmd, stdout=subprocess.PIPE)
-            output = p1.communicate()
+            try:
+                cmd = ['git', 'clone', student['url'], targetdir]
+                p1 = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+                output = p1.communicate()
+            except:
+                output = "Git clone error."
 
         if config["nbconvert"]:
             title = "<p>" + student['id'] + "</p>"
@@ -184,6 +186,9 @@ def process(config):
     ilearn = read_ilearn_export(config['ilearn-csv'], config['key-field'])
     repos = read_github_repos(config['github-repos-csv'])
 
+    print(len(github))
+    print(len(ilearn))
+    print(len(repos))
     students, not_in_github, extra_github, no_github_account = merge_students(config, github, ilearn, repos)
     
     if config['report']:

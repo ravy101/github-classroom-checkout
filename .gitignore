@@ -1,0 +1,4 @@
+/submissions*
+*.csv
+/__pycache__/
+.ipynb*

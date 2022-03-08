@@ -1,0 +1,13 @@
+{
+    "github-roster": "classroom_roster.csv",
+    "github-id-pattern": "\\d+",
+    "key-field": "id",
+    "github-token": "<YOUR TOKEN HERE>",
+    "ilearn-csv": "COMP2200_FHFYR_2022_ALL_Uwith COMP6200 Co-badged Grades-20220308_0518-comma_separated.csv",
+    "github-repos-csv": "mqcomp2200-workshop-repos.csv",
+    "organisation": "COMP2200-S1-2022",
+    "assignment": "practical",
+    "outdir": "submissions-2200-practical",
+    "workshops": ["Practical_1|FRI|01:00PM|C06","Practical_1|FRI|01:00PM|C06|Online-scheduled-weekday","Practical_1|FRI|03:00PM|C07","Practical_1|FRI|03:00PM|C07|Online-scheduled-weekday","Practical_1|FRI|11:00AM|C05","Practical_1|FRI|11:00AM|C05|Online-scheduled-weekday","Practical_1|THU|01:00PM|C02","Practical_1|THU|01:00PM|C02|In person-scheduled-weekday","Practical_1|THU|01:00PM|C02|Online-scheduled-weekday","Practical_1|THU|03:00PM|C04","Practical_1|THU|03:00PM|C04|Online-scheduled-weekday","Practical_1|THU|09:00AM|C02","Practical_1|THU|09:00AM|C02|Online-scheduled-weekday","Practical_1|THU|09:00AM|C08","Practical_1|THU|09:00AM|C08|Online-scheduled-weekday","Practical_1|THU|11:00AM|C03","Practical_1|THU|11:00AM|C03|Online-scheduled-weekday","Practical_1|WED|06:00PM|C01","Practical_1|WED|06:00PM|C01|In person-scheduled-weekday","Practical_1|WED|06:00PM|C01|Online-scheduled-weekday"],
+    "nbconvert": 0
+}
